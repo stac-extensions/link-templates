@@ -17,6 +17,8 @@ Potential usecases are exposing links to ZARR chunks or web map links such as XY
 
 All specifications originate from [`linkTemplates` as defined in OGC API - Records](https://docs.ogc.org/DRAFTS/20-004r1.html#sc_templated_links_with_variables).
 
+For assets, use the [Asset Templates Extension](https://github.com/stac-extensions/asset-templates).
+
 - Examples:
   - [STAC Item](examples/item.json)
   - [STAC Collection](examples/collection.json)
@@ -74,19 +76,6 @@ The following fields are only defined in OGC API - Records, but not in the STAC 
 - `hreflang`
 - `length` (note: [`file:size`](https://github.com/stac-extensions/file) is better suited in a STAC context)
 - `profile`
-
-## Relation types
-
-The following types should be used as applicable `rel` types in the
-[Link Object](https://github.com/radiantearth/stac-spec/tree/master/item-spec/item-spec.md#link-object).
-
-| Type  | Description                           |
-| ----- | ------------------------------------- |
-| asset | Identifies link templates that point to asset-like resources. |
-
-The `asset` relation type plugs a gap between OGC API - Records and STAC.
-As there's no construct to define templated links in assets and OGC API - Records has no notion of assets,
-we use the relation type to enable linked templates for asset-like resources.
 
 ## Contributing
 
